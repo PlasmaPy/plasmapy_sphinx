@@ -65,7 +65,6 @@ extensions = [
     "sphinx.ext.napoleon",
     "sphinx.ext.todo",
     "sphinx_copybutton",
-    "sphinx_gallery.load_style",
     "sphinx_changelog",
     "notfound.extension",
     "sphinx_issues",

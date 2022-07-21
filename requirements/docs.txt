@@ -9,7 +9,6 @@ pillow
 pygments >= 2.11.0
 sphinx-changelog
 sphinx-copybutton
-sphinx-gallery
 sphinx-hoverxref >= 1.1.1
 sphinx-issues >= 3.0.1
 sphinx-notfound-page >= 0.8
