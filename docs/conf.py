@@ -85,7 +85,10 @@ needs_sphinx = "4.4"
 # in docs/doc_guide.rst on Sphinx extensions.
 
 extensions = [
-    "sphinx.ext.autodoc",
+    # plasmapy extensions & setups
+    "plasmapy_sphinx.ext.autodoc",
+    "plasmapy_sphinx.ext.directives",
+    # other 3rd party extensions
     "sphinx.ext.extlinks",
     "sphinx.ext.graphviz",
     "sphinx.ext.intersphinx",
@@ -101,7 +104,6 @@ extensions = [
     "notfound.extension",
     "sphinx_issues",
     "sphinx_reredirects",
-    "plasmapy_sphinx",
 ]
 
 # Configure sphinxcontrib-bibtex
