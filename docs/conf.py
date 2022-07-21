@@ -88,6 +88,7 @@ extensions = [
     # plasmapy extensions & setups
     "plasmapy_sphinx.ext.autodoc",
     "plasmapy_sphinx.ext.directives",
+    "plasmapy_sphinx.ext.css",
     # other 3rd party extensions
     "sphinx.ext.extlinks",
     "sphinx.ext.graphviz",
