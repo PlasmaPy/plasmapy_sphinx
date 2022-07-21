@@ -625,16 +625,8 @@ class Automodsumm(Autosummary):
         return processor
 
     def get_items(self, names):
-        try:
-            self.bridge.genopt["imported-members"] = True
-        except AttributeError:  # Sphinx < 4.0
-            self.genopt["imported-members"] = True
+        self.bridge.genopt["imported-members"] = True
         return Autosummary.get_items(self, names)
-
-    @property
-    def genopt(self):
-        """.. deprecated:: Sphinx 2.0.0"""
-        return super().genopt
 
     @property
     def env(self) -> "BuildEnvironment":
@@ -653,11 +645,6 @@ class Automodsumm(Autosummary):
         directive.
         """
         return super().result
-
-    @property
-    def warnings(self) -> List["Node"]:
-        """.. deprecated:: Sphinx 2.0.0"""
-        return super().warnings
 
     def debug(self, message):
         """``level=0`` :meth:`directive_error`"""
@@ -678,10 +665,6 @@ class Automodsumm(Autosummary):
     def severe(self, message):
         """``level=4`` :meth:`directive_error`"""
         return super().severe(message)
-
-    def warn(self, msg: str) -> None:
-        """.. deprecated:: Sphinx 2.0.0"""
-        super(Automodsumm, self).warn(msg)
 
     def import_by_name(
         self, name: str, prefixes: List[str]
