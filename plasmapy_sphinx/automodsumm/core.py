@@ -292,17 +292,13 @@ class AutomodsummOptions:
         docname : str
             Name of the document/file where the :rst:dir:`automodsumm` direction
             was declared.
-
-        _warn : Callable
-            Instance of a `sphinx.util.logging.SphinxLoggerAdapter.warning` for
-            reporting warning level messages during a build.
         """
 
         self._app = app
         self._modname = modname
         self._options = options.copy()
         self._docname = docname
-        self._warn = _warn if _warn is not None else self.logger.warning
+        self._warn = self.logger.warning
 
         self.toctree = {
             "original": None,
@@ -620,7 +616,6 @@ class Automodsumm(Autosummary):
             modname=self.arguments[0],
             options=self.options,
             docname=self.env.docname,
-            _warn=self.warn,
         )
         return processor
 
