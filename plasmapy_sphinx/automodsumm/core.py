@@ -691,7 +691,10 @@ class Automodsumm(Autosummary):
 
 
 def setup(app: "Sphinx"):
-    """Sphinx ``setup()`` function for the :rst:dir:`automodsumm` functionality."""
+    """
+    Sphinx ``setup()`` function for the :rst:dir:`automodsumm`
+    functionality.
+    """
 
     app.setup_extension("sphinx.ext.autosummary")
 

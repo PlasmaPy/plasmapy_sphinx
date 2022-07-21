@@ -395,8 +395,8 @@ class GenDocsFromAutomodsumm:
                   :func:`sphinx.ext.autosummary.generate.find_autosummary_in_lines`.
         """
 
-        from ..autodoc.automodapi import AutomodapiOptions
-        from .core import AutomodsummOptions
+        from plasmapy_sphinx.autodoc.automodapi import AutomodapiOptions
+        from plasmapy_sphinx.automodsumm.core import AutomodsummOptions
 
         documented = []  # type: List[AutomodsummEntry]
 
