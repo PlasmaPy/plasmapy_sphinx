@@ -64,7 +64,7 @@ The Rundown
 
 """
 # The code here was adapted from v0.14.0.dev0 of sphinx_automodapi
-__all__ = ["setup", "__version__"]
+__all__ = ["__version__"]
 
 # Enforce Python version check during package import.
 # This is the same check as the one at the top of setup.py
@@ -77,8 +77,6 @@ if sys.version_info < (3, 6):  # coverage: ignore
 # should keep this content at the top.
 # ----------------------------------------------------------------------------
 import pkg_resources
-
-from sphinx.application import Sphinx
 
 from plasmapy_sphinx import autodoc, automodsumm, directives, utils
 
@@ -127,14 +125,3 @@ except pkg_resources.DistributionNotFound:
     del fallback_version, warn_add
 
 del pkg_resources, sys
-
-
-def setup(app: Sphinx):
-    """The `sphinx` ``setup()`` function for the `plasmapy_sphinx` extension."""
-
-    # Note: automodsum is setup by autodoc.setup since it is needed for
-    # autodoc.automodapi
-
-    directives.setup(app)
-    rtn = autodoc.setup(app)
-    return rtn
