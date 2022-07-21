@@ -25,7 +25,7 @@ from pkg_resources import parse_version
 sys.path.insert(0, os.path.abspath(".."))
 sys.path.insert(0, os.path.abspath("."))
 
-from plasmapy import __version__ as release  # noqa
+from plasmapy_sphinx import __version__ as release  # noqa
 
 if False:
     # noqa
@@ -34,38 +34,6 @@ if False:
 
 # -- General configuration ------------------------------------------------
 autosummary_generate = True
-automodapi_custom_groups = {
-    "aliases": {
-        "title": "Aliases",
-        "description": (
-            "PlasmaPy provides short-named (alias) versions of the most "
-            "common plasma functionality.  These aliases are only given to "
-            "functionality where there is a common lexicon in the community, "
-            "for example `~plasmapy.formulary.frequencies.plasma_frequency` "
-            " has the alias `~plasmapy.formulary.frequencies.wp_`.  All aliases "
-            "in PlasmaPy are denoted with a trailing underscore ``_``."
-        ),
-        "dunder": "__aliases__",
-    },
-    "lite-functions": {
-        "title": "Lite-Functions",
-        "description": (
-            """
-            Much of PlasmaPy's functionality incorporates `Astropy units
-            <https://docs.astropy.org/en/stable/units/>`_ for user convenience and
-            to mitigate calculation errors from inappropriate units, but this
-            comes at the sacrifice of speed.  While this penalty is not significant
-            for typical use, it can become substantial during intensive numerical
-            calculations. **Lite-functions** are introduced for the specific case
-            where speed matters, but **[USER NOTICE]** this comes with the
-            reduction of safeguards so a user needs to know what they are doing!
-            For additional details look to the glossary entry for
-            :term:`lite-function`.
-            """
-        ),
-        "dunder": "__lite_funcs__",
-    },
-}
 automodapi_group_order = (
     "modules",
     "classes",
@@ -453,5 +421,3 @@ html_favicon = "./_static/icon.ico"
 
 def setup(app: "Sphinx") -> None:
     app.add_config_value("revision", "", True)
-    app.add_css_file("css/admonition_color_contrast.css")
-    app.add_css_file("css/plasmapy.css", priority=600)
