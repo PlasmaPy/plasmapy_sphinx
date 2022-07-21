@@ -71,16 +71,4 @@ with the processed results.
    `~plasmapy_sphinx.automodsumm.generate.GenDocsFromAutomodsumm.event_handler__autodoc_skip_member`
 
 """
-
-from sphinx.application import Sphinx
-
 from plasmapy_sphinx.automodsumm import core, generate
-
-
-def setup(app: Sphinx):
-    """
-    Sphinx ``setup()`` function for setting up the :rst:dir:`automodsumm`
-    functionality.
-    """
-    rtn = core.setup(app)
-    return rtn
