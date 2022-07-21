@@ -18,9 +18,9 @@ from sphinx.ext.autosummary.generate import (
 from sphinx.locale import __
 from sphinx.util import logging
 from sphinx.util.osutil import ensuredir
-from typing import Any, Dict, List, Union
+from typing import Any, Dict, List
 
-from ..utils import templates_dir
+from plasmapy_sphinx.utils import templates_dir
 
 if False:
     # noqa
