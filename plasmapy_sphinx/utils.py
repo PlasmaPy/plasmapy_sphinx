@@ -21,6 +21,9 @@ from typing import Any, Dict
 package_dir = os.path.abspath(os.path.dirname(__file__))
 """Absolute path to the `plasmapy_sphinx` package directory."""
 
+css_dir = os.path.join(package_dir, "_static/css")
+"""Absolute path to the `plasmapy_sphinx` CSS directory."""
+
 templates_dir = os.path.join(package_dir, "_static/templates")
 """Absolute path to the `plasmapy_sphinx` templates directory."""
 
