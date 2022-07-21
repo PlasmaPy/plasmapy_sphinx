@@ -21,7 +21,7 @@ from typing import Any, Dict
 package_dir = os.path.abspath(os.path.dirname(__file__))
 """Absolute path to the `plasmapy_sphinx` package directory."""
 
-templates_dir = os.path.join(package_dir, "templates")
+templates_dir = os.path.join(package_dir, "_static/templates")
 """Absolute path to the `plasmapy_sphinx` templates directory."""
 
 default_grouping_info = OrderedDict(
