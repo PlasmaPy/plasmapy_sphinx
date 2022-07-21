@@ -67,7 +67,6 @@ extensions = [
     "sphinx_copybutton",
     "sphinx_gallery.load_style",
     "sphinx_changelog",
-    "hoverxref.extension",
     "notfound.extension",
     "sphinx_issues",
     "sphinx_reredirects",
