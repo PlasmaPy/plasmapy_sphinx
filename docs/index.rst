@@ -27,19 +27,19 @@ just the select the desired ones.
 
 .. toctree::
     :caption: First Steps
-    :maxdepth: `
+    :maxdepth: 1
 
     Installing <first_steps/install>
     Configuring <first_steps/configure>
 
 .. toctree::
-    :captions: Extensions
+    :caption: Extensions
     :maxdepth: 1
 
-    Autodoc <ext/autodoc>
-    Automodsumm <ext/automodsumm>
-    CSS <ext/css>
-    Directives <ext/directives>
+    api_static/plasmapy_sphinx.ext.autodoc
+    api_static/plasmapy_sphinx.ext.automodsumm
+    api_static/plasmapy_sphinx.ext.css
+    api_static/plasmapy_sphinx.ext.directives
 
 .. toctree::
     :caption: Contributor Guide
@@ -49,4 +49,4 @@ just the select the desired ones.
     :caption: All the Rest
     :maxdepth: 1
 
-    changelog/index
+..    changelog/index
