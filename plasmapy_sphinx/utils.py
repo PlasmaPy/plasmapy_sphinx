@@ -11,20 +11,20 @@ __all__ = [
 ]
 
 import inspect
-import os
 
 from collections import OrderedDict
 from importlib import import_module
 from sphinx.application import Sphinx
+from pathlib import Path
 from typing import Any, Dict
 
-package_dir = os.path.abspath(os.path.dirname(__file__))
+package_dir = Path(__file__).parent.absolute()
 """Absolute path to the `plasmapy_sphinx` package directory."""
 
-css_dir = os.path.join(package_dir, "_static/css")
+css_dir = (package_dir / "_static" / "css").resolve()
 """Absolute path to the `plasmapy_sphinx` CSS directory."""
 
-templates_dir = os.path.join(package_dir, "_static/templates")
+templates_dir = (package_dir / "_static" / "templates").resolve()
 """Absolute path to the `plasmapy_sphinx` templates directory."""
 
 default_grouping_info = OrderedDict(
