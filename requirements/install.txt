@@ -5,3 +5,4 @@ docutils
 jinja2 != 3.1
 sphinx >= 4.4
 sphinx-gallery
+sphinx_rtd_theme >= 1.0.0
