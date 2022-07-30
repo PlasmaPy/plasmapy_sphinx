@@ -9,9 +9,9 @@
 `plasmapy_sphinx` is a
 `Sphinx <https://www.sphinx-doc.org/en/master/>`__ extension package
 that contains custom documentation functionality used to document
-`PlasmaPy's packages <https://github.com/PlasmaPy>`_ .  The package is
+`PlasmaPy's packages <https://github.com/PlasmaPy>`_ .  This package is
 organized in such a way that users can use all available extensions, or
-just the select the desired ones.
+just a selection of desired ones.
 
 .. note::
 
