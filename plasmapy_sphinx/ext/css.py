@@ -1,5 +1,3 @@
-import os
-
 from sphinx.application import Sphinx
 
 from plasmapy_sphinx.utils import css_dir
