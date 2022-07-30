@@ -71,7 +71,6 @@ extensions = [
     # plasmapy extensions & setups
     "plasmapy_sphinx.ext.autodoc",
     "plasmapy_sphinx.ext.directives",
-    "plasmapy_sphinx.ext.css",
     # other 3rd party extensions
     "sphinx.ext.extlinks",
     "sphinx.ext.graphviz",
@@ -345,7 +344,7 @@ nitpick_ignore_regex = [
 # html_theme = 'alabaster'
 # html_theme = 'traditional'
 # html_theme = 'agogo'
-html_theme = "sphinx_rtd_theme"
+html_theme = "plasmapy_theme"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

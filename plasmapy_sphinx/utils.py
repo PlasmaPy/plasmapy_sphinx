@@ -21,10 +21,12 @@ from typing import Any, Dict
 package_dir = Path(__file__).parent.absolute()
 """Absolute path to the `plasmapy_sphinx` package directory."""
 
-css_dir = (package_dir / "_static" / "css").resolve()
+theme_dir = (package_dir / "theme").resolve()
+
+css_dir = (theme_dir / "static" / "css").resolve()
 """Absolute path to the `plasmapy_sphinx` CSS directory."""
 
-templates_dir = (package_dir / "_static" / "templates").resolve()
+templates_dir = (theme_dir / "static" / "templates").resolve()
 """Absolute path to the `plasmapy_sphinx` templates directory."""
 
 default_grouping_info = OrderedDict(
