@@ -1,3 +1,5 @@
+# Sphinx Guide to Theme Development
+# https://www.sphinx-doc.org/en/master/development/theming.html
 from sphinx.application import Sphinx
 
 from plasmapy_sphinx.ext.css import setup as css_setup
