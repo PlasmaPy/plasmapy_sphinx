@@ -33,7 +33,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --progress-bar off --upgrade pip
-        python -m pip install --progress-bar off -r requirements/docs.txt
+        python -m pip install --progress-bar off -r requirements/docs.txt plasmapy
         sudo apt-get install graphviz pandoc
     - name: Build Docs
       run: |
