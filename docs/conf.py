@@ -106,6 +106,7 @@ intersphinx_mapping = {
         None,
     ),
     "sphinx": ("https://www.sphinx-doc.org/en/master/", None),
+    "plasmapy": ("https://docs.plasmapy.org/en/latest/", None),
 }
 
 hoverxref_intersphinx = [
