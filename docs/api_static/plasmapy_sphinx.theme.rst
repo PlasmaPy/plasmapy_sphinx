@@ -1,7 +1,7 @@
 :orphan:
 
 `plasmapy_sphinx.theme`
-=============================
+=======================
 
 .. currentmodule:: plasmapy_sphinx.theme
 
