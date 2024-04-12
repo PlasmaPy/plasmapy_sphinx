@@ -11,7 +11,10 @@ def setup(app: Sphinx) -> None:
     """
     Sphinx ``setup()`` function for setting up the PlasmaPy theme.
     """
-    app.setup_extension("sphinx_rtd_theme")
+    import sphinx_rtd_theme
+
+    # app.setup_extension("sphinx_rtd_theme")
+    # sphinx_rtd_theme.setup(app)
     app.setup_extension("sphinx_gallery.load_style")
     css_setup(app)
 
