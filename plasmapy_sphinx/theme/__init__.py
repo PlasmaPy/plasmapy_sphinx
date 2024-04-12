@@ -16,4 +16,4 @@ def setup(app: Sphinx) -> None:
     css_setup(app)
 
     # Register the theme that can be referenced without adding a theme path
-    app.add_html_theme('plasmapy_theme', theme_path=theme_dir)
+    app.add_html_theme("plasmapy_theme", theme_path=f"{theme_dir.absolute()}")
