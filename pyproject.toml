@@ -16,3 +16,24 @@ include_trailing_comma = true
 force_alphabetical_sort_within_sections = true
 honor_noqa = true
 lines_between_types = 1
+
+[tool]
+[tool.pytest.ini_options]
+minversion = "5.1"
+testpaths = "\"plasmapy_sphinx\""
+norecursedirs = ["\"build\"", "\"docs/\""]
+doctest_optionflags = ["NORMALIZE_WHITESPACE", "ELLIPSIS", "NUMBER"]
+addopts = ["--doctest-modules", "--doctest-continue-on-failure"]
+filterwarnings = ["ignore:.*Creating a LegacyVersion.*:DeprecationWarning"]
+looponfailroots = ["plasmapy_sphinx"]
+
+[tool.coverage]
+[tool.coverage.run]
+omit = ["ci-helpers/*", "*/tests/*"]
+
+[tool.coverage.report]
+exclude_lines = ["coverage: ignore", "ImportError", "ModuleNotFoundError"]
+
+[tool.codespell]
+skip = "*.png,*cache*,*egg*,.git,.hypothesis,.idea,.tox,_build,*charged_particle*.ipynb,venv"
+ignore-words-list = ["aci,", "afe,", "ba,", "circularly,", "ded,", "dne,", "ect,", "explin,", "fo,", "fof,", "hist,", "hve,", "gud,", "nd,", "noo,", "nwo,", "ot,", "recuse,", "ro,", "te,", "ue,", "ue,", "windo"]
