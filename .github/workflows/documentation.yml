@@ -38,3 +38,11 @@ jobs:
     - name: Build Docs
       run: |
         sphinx-build ./docs ./docs/_build -n --keep-going -W -b html -q
+
+  pip-install:
+    name: Installation with pip
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install plasmapy_sphinx with pip
+      run: pip install .
