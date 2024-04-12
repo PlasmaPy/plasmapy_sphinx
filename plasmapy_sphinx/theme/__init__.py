@@ -11,6 +11,7 @@ def setup(app: Sphinx) -> None:
     """
     Sphinx ``setup()`` function for setting up the PlasmaPy theme.
     """
+    from os import path
     import sphinx_rtd_theme
 
     # app.setup_extension("sphinx_rtd_theme")
@@ -19,4 +20,7 @@ def setup(app: Sphinx) -> None:
     css_setup(app)
 
     # Register the theme that can be referenced without adding a theme path
-    app.add_html_theme("plasmapy_theme", theme_path=f"{theme_dir.absolute()}")
+    # app.add_html_theme("plasmapy_theme", theme_path=f"{theme_dir.absolute()}")
+    app.add_html_theme(
+        "plasmapy_theme", theme_path=path.abspath(path.dirname(__file__))
+    )
