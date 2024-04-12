@@ -14,7 +14,7 @@ def setup(app: Sphinx) -> None:
     import sphinx_rtd_theme
 
     # app.setup_extension("sphinx_rtd_theme")
-    # sphinx_rtd_theme.setup(app)
+    sphinx_rtd_theme.setup(app)
     app.setup_extension("sphinx_gallery.load_style")
     css_setup(app)
 
