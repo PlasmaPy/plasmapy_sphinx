@@ -26,3 +26,11 @@ doctest_optionflags = ["NORMALIZE_WHITESPACE", "ELLIPSIS", "NUMBER"]
 addopts = ["--doctest-modules", "--doctest-continue-on-failure"]
 filterwarnings = ["ignore:.*Creating a LegacyVersion.*:DeprecationWarning"]
 looponfailroots = ["plasmapy_sphinx"]
+
+[tool.coverage]
+[tool.coverage.run]
+omit = ["ci-helpers/*", "*/tests/*"]
+
+[tool.coverage.report]
+exclude_lines = ["coverage: ignore", "ImportError", "ModuleNotFoundError"]
+
