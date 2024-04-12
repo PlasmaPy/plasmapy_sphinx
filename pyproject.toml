@@ -16,3 +16,13 @@ include_trailing_comma = true
 force_alphabetical_sort_within_sections = true
 honor_noqa = true
 lines_between_types = 1
+
+[tool]
+[tool.pytest.ini_options]
+minversion = "5.1"
+testpaths = "\"plasmapy_sphinx\""
+norecursedirs = ["\"build\"", "\"docs/\""]
+doctest_optionflags = ["NORMALIZE_WHITESPACE", "ELLIPSIS", "NUMBER"]
+addopts = ["--doctest-modules", "--doctest-continue-on-failure"]
+filterwarnings = ["ignore:.*Creating a LegacyVersion.*:DeprecationWarning"]
+looponfailroots = ["plasmapy_sphinx"]
