@@ -4,6 +4,92 @@ requires = ["setuptools >= 41.2",
             "wheel >= 0.29.0"]  # ought to mirror 'requirements/build.txt'
 build-backend = "setuptools.build_meta"
 
+[project]
+name = "plasmapy_sphinx"
+maintainers = [
+  {name = "Erik T. Everson", email = "eeverson@plasmapy.org"},
+  {name = "Nicholas A. Murphy", email = "namurphy@cfa.harvard.edu"},
+]
+description = "Sphinx extensions for the PlasmaPy Project"
+readme = "README.md"
+requires-python = ">=3.6"
+dynamic = ["version"]
+license = {file = "LICENSE.md"}
+keywords = ["plasmapy", "sphinx", "documentation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+  "docutils",
+  "jinja2 != 3.1",
+  "sphinx >= 4.4",
+  "sphinx-gallery",
+  "sphinx_rtd_theme >= 1.0.0",
+]
+
+[project.optional-dependencies]
+tests = [
+  "codespell",
+  "dlint",
+  "flake8",
+  "flake8-absolute-import",
+  "flake8-implicit-str-concat",
+  "flake8-mutable",
+  "flake8-rst-docstrings",
+  "flake8-simplify",
+  "flake8-use-fstring",
+  "hypothesis",
+  "pre-commit",
+  "pydocstyle",
+  "pytest >= 5.4.0",
+  "pytest-regressions",
+  "pytest-xdist",
+  "tox",
+]
+docs = [
+    "numpydoc",
+    "pillow",
+    "pygments >= 2.11.0",
+    "sphinx-changelog",
+    "sphinx-copybutton",
+    "sphinx-hoverxref >= 1.1.1",
+    "sphinx-issues >= 3.0.1",
+    "sphinx-notfound-page >= 0.8",
+    "sphinx-reredirects",
+    "sphinxcontrib-bibtex",
+    "towncrier >= 19.2.0",
+]
+
+[project.entry-points."sphinx.html_themes"]
+plasmapy_theme = "plasmapy_sphinx.theme"
+
+[project.urls]
+Chat = "https://www.plasmapy.org/chat"
+Documentation = "https://docs.plasmapy_sphinx.plasmapy.org"
+Issues = "https://github.com/plasmapy/plasmapy_sphinx/issues"
+Source = "https://github.com/plasmapy/plasmapy_sphinx"
+website = "https://www.plasmapy.org"
+
+[tool]
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"plasmapy_sphinx.templates" = ["*"]
+
+
 [tool.isort]
 line_length = 88
 wrap_length = 80
@@ -17,7 +103,6 @@ force_alphabetical_sort_within_sections = true
 honor_noqa = true
 lines_between_types = 1
 
-[tool]
 [tool.pytest.ini_options]
 minversion = "5.1"
 testpaths = "\"plasmapy_sphinx\""
