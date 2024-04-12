@@ -12,7 +12,7 @@ on:
 
 jobs:
   documentation:
-    name: Doc Build - py${{ matrix.python }} on $${{ matrix.os }}
+    name: Doc Build - py${{ matrix.python }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
 
     strategy:
