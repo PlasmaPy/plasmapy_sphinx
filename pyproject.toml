@@ -87,8 +87,12 @@ website = "https://www.plasmapy.org"
 include-package-data = true
 
 [tool.setuptools.package-data]
-"plasmapy_sphinx.templates" = ["*"]
-
+"*" = [
+    "theme/theme.conf",
+    "theme/*.html",
+    "theme/static/css/*.css",
+    "theme/static/templates/automodsumm/*.rst",
+]
 
 [tool.isort]
 line_length = 88
