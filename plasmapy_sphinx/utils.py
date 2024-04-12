@@ -8,6 +8,8 @@ __all__ = [
     "get_custom_grouping_info",
     "package_dir",
     "templates_dir",
+    "theme_dir",
+    "css_dir",
 ]
 
 import inspect
