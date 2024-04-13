@@ -124,7 +124,8 @@ skip = "*.png,*cache*,*egg*,.git,.hypothesis,.idea,.tox,_build,*charged_particle
 ignore-words-list = ["aci,", "afe,", "ba,", "circularly,", "ded,", "dne,", "ect,", "explin,", "fo,", "fof,", "hist,", "hve,", "gud,", "nd,", "noo,", "nwo,", "ot,", "recuse,", "ro,", "te,", "ue,", "ue,", "windo"]
 
 [tool.ruff]
-target-version = "py36"
+# Minimum allowed target-version is Python 3.7
+target-version = "py37"
 output-format="grouped"
 show-fixes = true
 
