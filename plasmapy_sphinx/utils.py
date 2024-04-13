@@ -10,6 +10,7 @@ __all__ = [
     "templates_dir",
     "theme_dir",
     "css_dir",
+    "static_dir",
 ]
 
 import inspect
@@ -25,10 +26,13 @@ package_dir = Path(__file__).parent.absolute()
 
 theme_dir = (package_dir / "theme").resolve()
 
-css_dir = (theme_dir / "static" / "css").resolve()
+static_dir = (theme_dir / "static").resolve().absolute()
+"""Absolute path to the `plasmapy_sphinx` static directory."""
+
+css_dir = (static_dir / "css").resolve()
 """Absolute path to the `plasmapy_sphinx` CSS directory."""
 
-templates_dir = (theme_dir / "static" / "templates").resolve()
+templates_dir = (static_dir / "templates").resolve()
 """Absolute path to the `plasmapy_sphinx` templates directory."""
 
 default_grouping_info = OrderedDict(
