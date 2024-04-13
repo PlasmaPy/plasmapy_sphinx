@@ -327,10 +327,7 @@ from typing import Any, Callable, Dict, List, Optional, Union
 from plasmapy_sphinx.automodsumm.core import AutomodsummOptions, option_str_list
 from plasmapy_sphinx.utils import default_grouping_info
 
-if sys.version_info >= (3, 0):
-    text_type = str
-else:
-    text_type = unicode  # noqa
+text_type = str
 
 logger = logging.getLogger(__name__)
 

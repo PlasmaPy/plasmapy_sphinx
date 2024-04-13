@@ -23,7 +23,6 @@ from typing import Any, Dict, List
 from plasmapy_sphinx.utils import templates_dir
 
 if False:
-    # noqa
     # for annotation, does not need real import
     from sphinx.application import Sphinx
     from sphinx.builders import Builder
@@ -535,7 +534,7 @@ class GenDocsFromAutomodsumm:
     @staticmethod
     def event_handler__autodoc_skip_member(
         app: "Sphinx", what: str, name: str, obj: Any, skip: bool, options: dict
-    ):  # noqa
+    ):
         """
         Event handler for the Sphinx event :event:`autodoc-skip-member`.  This
         handler ensures the ``__call__`` method is documented if defined by the
