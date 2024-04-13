@@ -418,7 +418,7 @@ class AutomodsummOptions:
             opt_args = opt_args - unknown_args
         elif "all" in opt_args:
             self.warn(
-                f"Arguments of 'groups' and 'exclude-groups' results in no content."
+                "Arguments of 'groups' and 'exclude-groups' results in no content."
             )
             self.options["groups"] = []
             return
