@@ -2,10 +2,6 @@ ci:
   autofix_prs: false
   autoupdate_schedule: monthly
 
-# Specify the default version of Ruby in case it is not installed
-default_language_version:
-  ruby: 2.7.2
-
 repos:
 
 - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -53,12 +49,6 @@ repos:
     # run this hook on `labeler.yml` (or certain other files).
     exclude: .github/labeler.yml|.pre-commit-search-and-replace.yaml
 
-- repo: https://github.com/mattlqx/pre-commit-search-and-replace
-  rev: v1.0.5
-  hooks:
-  - id: search-and-replace
-    exclude: changelog/.*|docs/changelog/.*|.sourcery.yaml|docs/_global_substitutions.py|CHANGELOG.rst
-
 - repo: https://github.com/pre-commit/pygrep-hooks
   rev: v1.10.0
   hooks:
@@ -101,15 +91,3 @@ repos:
   rev: v0.9.1
   hooks:
   - id: sphinx-lint
-
-- repo: https://github.com/nbQA-dev/nbQA
-  rev: 1.8.5
-  hooks:
-  - id: nbqa-check-ast
-    name: validate Python notebooks
-  - id: nbqa-ruff
-    name: ruff for notebooks (see https://docs.astral.sh/ruff/rules)
-    args: [--fix, '--select=A,ARG,B,BLE,C,C4,E,F,FLY,I,INT,ISC,PERF,PIE,PLC,PLE,PYI,Q003,RET,RSE,SIM,TID,TRY,UP,W', '--ignore=B007,B008,B015,B018,E402,E501,E741,SIM114']
-    additional_dependencies:
-    # remove ruff dependency after 0.3.5 is released
-    - ruff !=0.3.3, !=0.3.4
