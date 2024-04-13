@@ -220,7 +220,6 @@ from plasmapy_sphinx.utils import (
 )
 
 if False:
-    # noqa
     # for annotation, does not need real import
     from docutils.nodes import Node
     from docutils.statemachine import StringList
