@@ -6,7 +6,7 @@ on:
       tag:
         description: Release tag 🏷️
         required: true
-        default: 2024.5.0rc1
+        default: 0.1.0rc1
 
 jobs:
 
