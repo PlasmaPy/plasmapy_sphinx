@@ -330,7 +330,7 @@ from plasmapy_sphinx.utils import default_grouping_info
 if sys.version_info >= (3, 0):
     text_type = str
 else:
-    text_type = unicode  # noqa
+    text_type = unicode
 
 logger = logging.getLogger(__name__)
 
