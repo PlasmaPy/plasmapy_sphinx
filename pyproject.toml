@@ -134,3 +134,6 @@ ignore = [
   "F401",
 ]
 ignore-init-module-imports = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
