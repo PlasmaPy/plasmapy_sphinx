@@ -130,9 +130,6 @@ output-format="grouped"
 show-fixes = true
 
 [tool.ruff.lint]
-extend-select = [
-  "A",
-]
 ignore = [
   "F401",
 ]
