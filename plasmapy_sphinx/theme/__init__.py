@@ -15,4 +15,4 @@ def setup(app: Sphinx) -> None:
     app.setup_extension("sphinx_gallery.load_style")
 
     # Register the theme that can be referenced without adding a theme path
-    app.add_html_theme("plasmapy_sphinx", theme_path=str(theme_dir.absolute()))
+    app.add_html_theme("plasmapy_theme", theme_path=str(theme_dir.absolute()))

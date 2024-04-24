@@ -73,7 +73,7 @@ docs = [
 ]
 
 [project.entry-points."sphinx.html_themes"]
-plasmapy_sphinx = "plasmapy_sphinx.theme"
+plasmapy_theme = "plasmapy_sphinx.theme"
 
 [project.urls]
 Chat = "https://www.plasmapy.org/chat"
