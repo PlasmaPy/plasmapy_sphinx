@@ -31,6 +31,8 @@
 */
 
 @import "theme.css"; /* From sphinx_rtd_theme */
+@import "admonition_color_contrast.css";
+
 
 /* -----------------------------------------------------------------------------
  * RTD Overrides

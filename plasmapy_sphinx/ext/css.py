@@ -4,13 +4,12 @@ from plasmapy_sphinx.utils import static_dir, css_dir
 
 
 def add_plasmapy_css(app, config):
-    for path in {static_dir, css_dir}:
-        path = str(path)
-        if path not in config.html_static_path:
-            config.html_static_path.append(path)
 
-    app.add_css_file("admonition_color_contrast.css")
-    app.add_css_file("plasmapy.css", priority=501)
+    if static_dir not in config.html_static_path:
+        config.html_static_path.append(static_dir)
+
+    rel_path = css_dir.relative_to(static_dir)
+    app.add_css_file(rel_path / "plasmapy.css", priority=501)
 
 
 def setup(app: Sphinx) -> None:
