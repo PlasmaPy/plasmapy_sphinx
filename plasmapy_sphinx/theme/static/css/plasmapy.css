@@ -31,7 +31,6 @@
 */
 
 @import "theme.css"; /* From sphinx_rtd_theme */
-@import "override_version_badge.css";
 
 /* -----------------------------------------------------------------------------
  * RTD Overrides
