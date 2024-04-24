@@ -6,7 +6,7 @@ from plasmapy_sphinx.utils import static_dir, css_dir
 def add_plasmapy_css(app, config):
 
     if static_dir not in config.html_static_path:
-        config.html_static_path.append(static_dir)
+        config.html_static_path.append(str(static_dir))
 
     rel_path = css_dir.relative_to(static_dir)
     app.add_css_file(str(rel_path / "plasmapy.css"), priority=501)
