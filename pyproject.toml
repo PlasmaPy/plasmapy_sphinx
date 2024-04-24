@@ -124,5 +124,20 @@ omit = ["ci-helpers/*", "*/tests/*"]
 exclude_lines = ["coverage: ignore", "ImportError", "ModuleNotFoundError"]
 
 [tool.codespell]
-skip = "*.png,*cache*,*egg*,.git,.hypothesis,.idea,.tox,_build,*charged_particle*.ipynb,venv"
+skip = "*.png,*cache*,*egg*,.git,.hypothesis,.idea,.tox,_build,*charged_particle*.ipynb,venv,pyproject.toml"
 ignore-words-list = ["aci,", "afe,", "ba,", "circularly,", "ded,", "dne,", "ect,", "explin,", "fo,", "fof,", "hist,", "hve,", "gud,", "nd,", "noo,", "nwo,", "ot,", "recuse,", "ro,", "te,", "ue,", "ue,", "windo"]
+
+[tool.ruff]
+# Minimum allowed target-version is Python 3.7
+target-version = "py37"
+output-format="grouped"
+show-fixes = true
+
+[tool.ruff.lint]
+ignore = [
+  "F401",
+]
+ignore-init-module-imports = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"

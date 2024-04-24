@@ -25,10 +25,9 @@ from pkg_resources import parse_version
 sys.path.insert(0, os.path.abspath(".."))
 sys.path.insert(0, os.path.abspath("."))
 
-from plasmapy_sphinx import __version__ as release  # noqa
+from plasmapy_sphinx import __version__ as release
 
 if False:
-    # noqa
     # for annotation, does not need real import
     from sphinx.application import Sphinx
 

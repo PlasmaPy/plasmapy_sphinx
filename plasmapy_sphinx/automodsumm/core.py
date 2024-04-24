@@ -220,7 +220,6 @@ from plasmapy_sphinx.utils import (
 )
 
 if False:
-    # noqa
     # for annotation, does not need real import
     from docutils.nodes import Node
     from docutils.statemachine import StringList
@@ -418,7 +417,7 @@ class AutomodsummOptions:
             opt_args = opt_args - unknown_args
         elif "all" in opt_args:
             self.warn(
-                f"Arguments of 'groups' and 'exclude-groups' results in no content."
+                "Arguments of 'groups' and 'exclude-groups' results in no content."
             )
             self.options["groups"] = []
             return
