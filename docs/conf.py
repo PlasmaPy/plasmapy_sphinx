@@ -25,10 +25,9 @@ from pkg_resources import parse_version
 sys.path.insert(0, os.path.abspath(".."))
 sys.path.insert(0, os.path.abspath("."))
 
-from plasmapy_sphinx import __version__ as release  # noqa
+from plasmapy_sphinx import __version__ as release
 
 if False:
-    # noqa
     # for annotation, does not need real import
     from sphinx.application import Sphinx
 
@@ -356,11 +355,7 @@ html_theme = "plasmapy_theme"
 #
 html_logo = "./_static/with-text-light-190px.png"
 html_theme_options = {
-    "logo_only": True,
-    #
-    # TOC options
-    #   https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html#theme-options
-    "includehidden": False,
+    "logo_only": False,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
