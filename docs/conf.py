@@ -105,6 +105,7 @@ intersphinx_mapping = {
         None,
     ),
     "sphinx": ("https://www.sphinx-doc.org/en/master/", None),
+    "plasmapy": ("https://docs.plasmapy.org/en/latest/", None),
 }
 
 hoverxref_intersphinx = [
@@ -352,11 +353,7 @@ html_theme = "plasmapy_theme"
 #
 html_logo = "./_static/with-text-light-190px.png"
 html_theme_options = {
-    "logo_only": True,
-    #
-    # TOC options
-    #   https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html#theme-options
-    "includehidden": False,
+    "logo_only": False,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,

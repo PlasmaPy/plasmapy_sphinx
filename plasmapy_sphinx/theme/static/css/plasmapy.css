@@ -30,6 +30,10 @@
   CSS files can be validated at: https://jigsaw.w3.org/css-validator
 */
 
+@import "theme.css"; /* From sphinx_rtd_theme */
+@import "admonition_color_contrast.css";
+
+
 /* -----------------------------------------------------------------------------
  * RTD Overrides
  */

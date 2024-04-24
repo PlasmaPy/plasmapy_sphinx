@@ -1,4 +1,4 @@
-Configuring Your `conf.py`
-==========================
+Configuring Your ``conf.py``
+============================
 
 blah
