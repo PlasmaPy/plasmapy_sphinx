@@ -20,8 +20,8 @@ def setup(app: Sphinx) -> None:
     #     "plasmapy_theme", theme_path=path.abspath(path.dirname(__file__))
     # )
 
-    # from os import path
-    import sphinx_rtd_theme
-
-    # app.setup_extension("sphinx_rtd_theme")
-    sphinx_rtd_theme.setup(app)
+    # # from os import path
+    # import sphinx_rtd_theme
+    #
+    # # app.setup_extension("sphinx_rtd_theme")
+    # sphinx_rtd_theme.setup(app)
