@@ -61,6 +61,7 @@ tests = [
 ]
 docs = [
     "numpydoc",
+    "packaging",
     "pillow",
     "pygments >= 2.11.0",
     "sphinx-changelog",
