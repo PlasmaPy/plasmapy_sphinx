@@ -2,6 +2,7 @@
 # ought to mirror 'install_requires' under 'options' in setup.cfg
 -r build.txt
 docutils
+importlib_metadata; python_version < '3.8'
 jinja2 != 3.1
 sphinx >= 4.4
 sphinx-gallery

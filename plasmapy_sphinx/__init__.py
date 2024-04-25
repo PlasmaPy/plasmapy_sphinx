@@ -73,28 +73,26 @@ import sys
 if sys.version_info < (3, 6):  # coverage: ignore
     raise ImportError("plasmapy_sphinx does not support Python < 3.6")
 
-# Packages may add whatever they like to this file, but
-# should keep this content at the top.
-# ----------------------------------------------------------------------------
-import pkg_resources
+if sys.version_info >= (3, 8):
+    from importlib.metadata import version, PackageNotFoundError
+else:
+    from importlib_metadata import version, PackageNotFoundError
 
 from plasmapy_sphinx import autodoc, automodsumm, directives, utils
 
 
 # define version
 try:
-    # this places a runtime dependency on setuptools
-    #
     # note: if there's any distribution metadata in your source files, then this
     #       will find a version based on those files.  Keep distribution metadata
     #       out of your repository unless you've intentionally installed the package
-    #       as editable (e.g. `pip install -e {plasmapy_directory_root}`),
+    #       as editable (e.g. `pip install -e {root_directory}`),
     #       but then __version__ will not be updated with each commit, it is
     #       frozen to the version at time of install.
     #
     #: `plasmapy_sphinx` version string
-    __version__ = pkg_resources.get_distribution("plasmapy_sphinx").version
-except pkg_resources.DistributionNotFound:
+    __version__ = version("plasmapy_sphinx")
+except PackageNotFoundError:
     # package is not installed
     fallback_version = "unknown"
     try:
@@ -124,4 +122,4 @@ except pkg_resources.DistributionNotFound:
         del warn
     del fallback_version, warn_add
 
-del pkg_resources, sys
+del sys
