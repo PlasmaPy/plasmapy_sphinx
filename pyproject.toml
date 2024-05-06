@@ -1,7 +1,9 @@
 [build-system]
-requires = ["setuptools >= 41.2",
-            "setuptools_scm",
-            "wheel >= 0.29.0"]  # ought to mirror 'requirements/build.txt'
+requires = [  # ought to mirror 'requirements/build.txt'
+    "setuptools >= 41.2",
+    "setuptools_scm",
+    "wheel >= 0.29.0",
+]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -31,7 +33,7 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
-dependencies = [
+dependencies = [  # ought to mirror 'requirements/install.txt'
   "docutils",
   "importlib_metadata; python_version < '3.8'",
   "jinja2 != 3.1",
@@ -41,7 +43,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-tests = [
+tests = [  # ought to mirror 'requirements/tests.txt'
   "codespell",
   "dlint",
   "flake8",
@@ -59,7 +61,7 @@ tests = [
   "pytest-xdist",
   "tox",
 ]
-docs = [
+docs = [  # ought to mirror 'requirements/docs.txt'
     "numpydoc",
     "packaging",
     "pillow",
