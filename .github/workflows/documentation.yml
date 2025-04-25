@@ -10,6 +10,8 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions: {}  # disables all GitHub permissions for the workflow
+
 jobs:
   documentation:
     name: Doc Build - py${{ matrix.python }} on ${{ matrix.os }}
