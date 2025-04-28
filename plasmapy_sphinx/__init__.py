@@ -70,8 +70,8 @@ __all__ = ["__version__"]
 # This is the same check as the one at the top of setup.py
 import sys
 
-if sys.version_info < (3, 6):  # coverage: ignore
-    raise ImportError("plasmapy_sphinx does not support Python < 3.6")
+if sys.version_info < (3, 8):  # coverage: ignore
+    raise ImportError("plasmapy_sphinx does not support Python < 3.8")
 
 if sys.version_info >= (3, 8):
     from importlib.metadata import version, PackageNotFoundError
