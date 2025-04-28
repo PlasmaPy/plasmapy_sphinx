@@ -65,6 +65,7 @@ docs = [  # ought to mirror 'requirements/docs.txt'
     "numpydoc",
     "packaging",
     "pillow",
+    "plasmapy > 8.0",
     "pygments >= 2.11.0",
     "sphinx-changelog",
     "sphinx-copybutton",
