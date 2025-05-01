@@ -53,11 +53,11 @@ jobs:
         include:
           - python: '3.12'
             os: ubuntu-latest
-            sphinx: "sphinx<7.4"
+            sphinx: 'sphinx<7.4'
 
           - python: '3.12'
             os: ubuntu-latest
-            sphinx: "sphinx<8.2"
+            sphinx: 'sphinx<8.2'
 
     steps:
       - name: Checkout code
