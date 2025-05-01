@@ -339,6 +339,8 @@ nitpick_ignore_regex = [
     (python_role, "plasmapy.analysis.swept_langmuir.find_floating_potential"),
     (python_role, "plasmapy.particles.particle_collections"),
     (python_role, "plasmapy.utils.decorators.lite_func"),
+    # Sphinx
+    (python_role, "sphinx.util.docutils.SphinxDirective.parse_inline"),
 ]
 
 # -- Options for HTML output ----------------------------------------------
