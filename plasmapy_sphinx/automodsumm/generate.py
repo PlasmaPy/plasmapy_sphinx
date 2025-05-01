@@ -293,7 +293,7 @@ class GenDocsFromAutomodsumm:
             ensuredir(path)
 
             try:
-                name, obj, parent, modname = import_by_name(entry.name)
+                name, obj, parent, modname = import_by_name(entry.name, prefixes=(None,))
                 qualname = name.replace(modname + ".", "")
             except ImportError as e:
                 try:
