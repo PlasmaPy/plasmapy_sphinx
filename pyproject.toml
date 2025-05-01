@@ -35,6 +35,7 @@ dependencies = [  # ought to mirror 'requirements/install.txt'
   "docutils",
   "importlib_metadata; python_version < '3.8'",
   "jinja2 != 3.1",
+  "packaging",
   "sphinx >= 4.4, < 7.4",
   "sphinx-gallery",
   "sphinx_rtd_theme >= 1.0.0",
