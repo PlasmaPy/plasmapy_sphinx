@@ -664,7 +664,16 @@ class Automodsumm(Autosummary):
         self, name: str, prefixes: List[str]
     ) -> Tuple[str, Any, Any, str]:
         """See :func:`sphinx.ext.autosummary.import_by_name`"""
-        return super(Automodsumm, self).import_by_name(name, prefixes)
+
+        for prefix in prefixes:
+            if prefix is None:
+                continue
+
+            if name.startswith(f"{prefix}."):
+                name = name.removeprefix(f'{prefix}.')
+                break
+
+        return super().import_by_name(name, prefixes)
 
 
 def setup(app: "Sphinx"):
