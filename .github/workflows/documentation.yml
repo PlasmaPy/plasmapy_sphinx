@@ -32,7 +32,7 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python }}
-        cache: 'pip'
+        cache: pip
     - name: Install dependencies
       run: |
         python -m pip install --progress-bar off --upgrade pip
@@ -44,36 +44,36 @@ jobs:
 
   sphinx_limits:
     name: Doc Build on ${{ matrix.sphinx }}
-    runs-on:  ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
 
     strategy:
       fail-fast: false
 
       matrix:
         include:
-          - python: '3.12'
-            os: ubuntu-latest
-            sphinx: 'sphinx<7.4'
+        - python: '3.12'
+          os: ubuntu-latest
+          sphinx: sphinx<7.4
 
-          - python: '3.12'
-            os: ubuntu-latest
-            sphinx: 'sphinx<8.2'
+        - python: '3.12'
+          os: ubuntu-latest
+          sphinx: sphinx<8.2
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 1
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ matrix.python }}
-          cache: 'pip'
-      - name: Install dependencies
-        run: |
-          python -m pip install --progress-bar off --upgrade pip
-          python -m pip install --progress-bar off -r requirements/docs.txt "${{ matrix.sphinx }}"
-          sudo apt-get install graphviz pandoc
-      - name: Build Docs
-        run: |
-          sphinx-build ./docs ./docs/_build -n --keep-going -W -b html
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 1
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python }}
+        cache: pip
+    - name: Install dependencies
+      run: |
+        python -m pip install --progress-bar off --upgrade pip
+        python -m pip install --progress-bar off -r requirements/docs.txt "${{ matrix.sphinx }}"
+        sudo apt-get install graphviz pandoc
+    - name: Build Docs
+      run: |
+        sphinx-build ./docs ./docs/_build -n --keep-going -W -b html
