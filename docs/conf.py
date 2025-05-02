@@ -342,6 +342,7 @@ nitpick_ignore_regex = [
     # Sphinx
     (python_role, "sphinx.util.docutils.SphinxDirective.parse_inline"),
     (python_role, "system_message"),
+    (python_role, "sphinx.ext.autodoc.ObjectMembers"),
 ]
 
 # -- Options for HTML output ----------------------------------------------
