@@ -341,6 +341,7 @@ nitpick_ignore_regex = [
     (python_role, "plasmapy.utils.decorators.lite_func"),
     # Sphinx
     (python_role, "system_message"),  # sphinx.util.docutils.system_message
+    (python_role, "ObjectMember"),  # sphinx.ext.autodoc.ObjectMember
     (python_role, "ObjectMembers"),  # sphinx.ext.autodoc.ObjectMembers
 ]
 
