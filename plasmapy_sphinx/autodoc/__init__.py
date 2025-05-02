@@ -1,5 +1,6 @@
 """
-This sub-package contains functionality that extends `sphinx.ext.autodoc`.
+`plasmapy_sphinx.autodoc` contains functionality that extends
+`sphinx.ext.autodoc`.
 
 *This functionality was highly influenced by and adapted from*
 `sphinx.ext.autodoc` *and* `sphinx_automodapi.automodapi`.
