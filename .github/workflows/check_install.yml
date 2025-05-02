@@ -20,8 +20,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python: [ '3.8', '3.10', '3.11', '3.12', '3.13' ]
-        os: [ ubuntu-latest ]
+        python: ['3.8', '3.10', '3.11', '3.12', '3.13']
+        os: [ubuntu-latest]
 
     steps:
     - name: Checkout code
@@ -33,7 +33,7 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python }}
-        cache: 'pip'
+        cache: pip
     - name: Install plasmapy_sphinx with pip
       run: pip install .
     - name: Import plasmapy_sphinx
