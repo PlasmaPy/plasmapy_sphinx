@@ -670,7 +670,7 @@ class Automodsumm(Autosummary):
                 continue
 
             if name.startswith(f"{prefix}."):
-                name = name.removeprefix(f'{prefix}.')
+                name = name[len(prefix):]
                 break
 
         return super().import_by_name(name, prefixes)
