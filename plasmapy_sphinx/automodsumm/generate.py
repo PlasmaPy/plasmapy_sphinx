@@ -322,6 +322,11 @@ class GenDocsFromAutomodsumm:
             }
             if Version(sphinx_version) < Version("8.2"):
                 _kwargs["app"] = app
+            else:
+                _kwargs["config"] = app.config
+                _kwargs["events"] = app.events
+                _kwargs["registry"] = app.registry
+
             content = generate_autosummary_content(**_kwargs)
 
             filename = os.path.join(path, filename_map.get(name, name) + suffix)
