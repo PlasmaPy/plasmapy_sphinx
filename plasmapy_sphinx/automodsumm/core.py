@@ -283,16 +283,17 @@ class AutomodsummOptions:
             Instance of the sphinx application.
 
         modname : `str`
-            Name of the module given in the :rst:dir:`automodsumm` directive.  This
-            is the module to be inspected and have it's objects grouped.
+            Name of the module given in the :rst:dir:`automodsumm`
+            directive.  This is the module to be inspected and have
+            its objects grouped.
 
         options : Dict[str, Any]
-            Dictionary of options given for the :rst:dir:`automodsumm` directive
-            declaration.
+            Dictionary of options given for the :rst:dir:`automodsumm`
+            directive declaration.
 
         docname : str
-            Name of the document/file where the :rst:dir:`automodsumm` direction
-            was declared.
+            Name of the document/file where the :rst:dir:`automodsumm`
+            direction was declared.
         """
 
         self._app = app
@@ -614,8 +615,9 @@ class Automodsumm(Autosummary):
 
     def option_processor(self):
         """
-        Instance of `~plasmapy_sphinx.automodsumm.core.Automodsumm` so further processing
-        (beyond :attr:`option_spec`) of directive options can be performed.
+        Instance of `~plasmapy_sphinx.automodsumm.core.Automodsumm` so
+        further processing (beyond :attr:`option_spec`) of directive
+        options can be performed.
         """
         processor = AutomodsummOptions(
             app=self.env.app,
