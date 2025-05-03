@@ -311,7 +311,6 @@ from docutils.statemachine import StringList
 from packaging.version import Version
 from sphinx import __version__ as sphinx_version
 from sphinx.application import Sphinx
-from typing import Any
 
 try:
     from sphinx.deprecation import RemovedInSphinx50Warning
