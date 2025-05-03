@@ -208,6 +208,8 @@ __all__ = [
 import os
 
 from importlib import import_module
+from packaging.version import Version
+from sphinx import __version__ as sphinx_version
 from sphinx.ext.autosummary import Autosummary
 from sphinx.util import logging
 from typing import Any, Callable, Dict, List, Tuple, Union
@@ -304,6 +306,11 @@ class AutomodsummOptions:
             "rel_to_doc": None,
             "abspath": None,
         }  # type: Dict[str, Union[str, None]]
+
+        if Version(sphinx_version) < Version("7.2") and "no-index" in self._options:
+            # sphinx started using :no-index: instead of the original :noindex:
+            opt_value = self._options.pop("no-index")
+            self._options["noindex"] = opt_value
 
         self.condition_options()
 
