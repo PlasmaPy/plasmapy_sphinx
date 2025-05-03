@@ -308,11 +308,6 @@ class AutomodsummOptions:
             "abspath": None,
         }  # type: Dict[str, Union[str, None]]
 
-        if Version(sphinx_version) < Version("7.2") and "no-index" in self._options:
-            # sphinx started using :no-index: instead of the original :noindex:
-            opt_value = self._options.pop("no-index")
-            self._options["noindex"] = opt_value
-
         self.condition_options()
 
     @property
