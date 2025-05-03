@@ -348,6 +348,8 @@ _option_spec = {
     "inheritance-diagram": bool_option,
     "no-inheritance-diagram": bool_option,
 }  # type: Dict[str, Callable]
+if "no-index" not in _option_spec:
+    _option_spec["no-index"] = bool_option
 for option_name in list(_option_spec):
     if "member" in option_name:
         del _option_spec[option_name]
