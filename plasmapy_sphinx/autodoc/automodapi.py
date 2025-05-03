@@ -303,7 +303,6 @@ __all__ = ["AutomodapiOptions", "ModAPIDocumenter", "setup"]
 
 import inspect
 import re
-import sys
 import warnings
 
 from collections import OrderedDict
