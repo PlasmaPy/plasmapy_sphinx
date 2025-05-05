@@ -27,7 +27,6 @@ from plasmapy_sphinx.utils import templates_dir
 if False:
     # for annotation, does not need real import
     from sphinx.application import Sphinx
-    from sphinx.builders import Builder
 
 
 logger = logging.getLogger(__name__)
