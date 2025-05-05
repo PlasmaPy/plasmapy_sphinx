@@ -1,5 +1,5 @@
 """
-This modules is a `Sphinx extension
+This module is a `Sphinx extension
 <https://www.sphinx-doc.org/en/master/usage/extensions/index.html>`_
 that exposes the functionality of `plasmapy_sphinx.autodoc`.
 
