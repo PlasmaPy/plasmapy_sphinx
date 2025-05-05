@@ -1,3 +1,13 @@
+"""
+This module is a `Sphinx extension
+<https://www.sphinx-doc.org/en/master/usage/extensions/index.html>`_
+that exposes the functionality of `plasmapy_sphinx.automodsumm`.
+
+.. automodapi:: plasmapy_sphinx.automodsumm
+   :no-index:
+   :no-groups:
+
+"""
 from sphinx.application import Sphinx
 
 from plasmapy_sphinx.automodsumm import core
