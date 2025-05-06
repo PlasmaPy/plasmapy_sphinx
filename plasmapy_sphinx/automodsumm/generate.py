@@ -24,7 +24,7 @@ from typing import Any, Dict, List
 
 from plasmapy_sphinx.utils import templates_dir
 
-if False:  # noqa
+if False:
     # for annotation, does not need real import
     from sphinx.application import Sphinx
 
