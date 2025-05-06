@@ -8,6 +8,8 @@ on:
         required: true
         default: 0.1.0rc1
 
+permissions: {}  # disables all GitHub permissions for the workflow
+
 jobs:
 
   tag:
