@@ -10,7 +10,7 @@ on:
   pull_request:
   workflow_dispatch:
 
-permissions: {}
+permissions: {}  # disables all GitHub permissions for the workflow
 
 jobs:
   pip-install-and-import:
