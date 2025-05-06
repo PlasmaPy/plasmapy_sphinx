@@ -24,7 +24,6 @@ just a selection of desired ones.
     :maxdepth: 1
 
     Installing <first_steps/install>
-    Configuring <first_steps/configure>
 
 .. toctree::
     :caption: Extensions
