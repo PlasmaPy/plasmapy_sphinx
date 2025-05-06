@@ -23,7 +23,7 @@ just a selection of desired ones.
     :caption: First Steps
     :maxdepth: 1
 
-    Installing <first_steps/install>
+    Installation <first_steps/install>
 
 .. toctree::
     :caption: Extensions
