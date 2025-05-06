@@ -40,6 +40,7 @@ just a selection of desired ones.
     api_static/plasmapy_sphinx.ext.automodsumm
     api_static/plasmapy_sphinx.ext.css
     api_static/plasmapy_sphinx.ext.directives
+    api_static/plasmapy_sphinx.theme
 
 .. toctree::
     :caption: Contributor Guide
