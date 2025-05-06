@@ -15,13 +15,7 @@ just a selection of desired ones.
 
 .. note::
 
-    `plasmapy_sphinx` is not currently released in any form and can
-    only be installed directly from its `GitHub repository
-    <https://github.com/plasmapy/plasmapy_sphinx>`__.  We do plan to
-    release it to https://pypi.org but there is no scheduled release
-    date at this time.
-
-    Additionally, this package currently has no tests covering its
+    This package currently has no tests covering its
     functionality.
 
 
