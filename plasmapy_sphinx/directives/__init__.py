@@ -1,5 +1,5 @@
 """
-This sub-package defines
+`plasmapy_sphinx.directives` defines
 `directives
 <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html>`_
 and
