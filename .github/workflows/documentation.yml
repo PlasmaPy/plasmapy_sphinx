@@ -51,6 +51,10 @@ jobs:
 
       matrix:
         include:
+        - python: '3.11'
+          os: ubuntu-latest
+          sphinx: sphinx<7.2
+
         - python: '3.12'
           os: ubuntu-latest
           sphinx: sphinx<7.4
