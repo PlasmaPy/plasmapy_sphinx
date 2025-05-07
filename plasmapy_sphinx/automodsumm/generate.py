@@ -8,6 +8,8 @@ import os
 import re
 
 from jinja2 import TemplateNotFound
+from packaging.version import Version
+from sphinx import __version__ as sphinx_version
 from sphinx.ext.autodoc.mock import mock
 from sphinx.ext.autosummary import get_rst_suffix, import_by_name, import_ivar_by_name
 from sphinx.ext.autosummary.generate import (
@@ -25,7 +27,6 @@ from plasmapy_sphinx.utils import templates_dir
 if False:
     # for annotation, does not need real import
     from sphinx.application import Sphinx
-    from sphinx.builders import Builder
 
 
 logger = logging.getLogger(__name__)
@@ -291,7 +292,7 @@ class GenDocsFromAutomodsumm:
             ensuredir(path)
 
             try:
-                name, obj, parent, modname = import_by_name(entry.name)
+                name, obj, parent, modname = import_by_name(entry.name, prefixes=(None,))
                 qualname = name.replace(modname + ".", "")
             except ImportError as e:
                 try:
@@ -306,19 +307,26 @@ class GenDocsFromAutomodsumm:
             if app:
                 context.update(app.config.autosummary_context)
 
-            content = generate_autosummary_content(
-                name,
-                obj,
-                parent,
-                template,
-                entry.template,
-                imported_members,
-                app,
-                entry.recursive,
-                context,
-                modname,
-                qualname,
-            )
+            _kwargs = {
+                "name": name,
+                "obj": obj,
+                "parent": parent,
+                "template": template,
+                "template_name": entry.template,
+                "imported_members": imported_members,
+                "recursive": entry.recursive,
+                "context": context,
+                "modname": modname,
+                "qualname": qualname,
+            }
+            if Version(sphinx_version) < Version("8.2"):
+                _kwargs["app"] = app
+            else:
+                _kwargs["config"] = app.config
+                _kwargs["events"] = app.events
+                _kwargs["registry"] = app.registry
+
+            content = generate_autosummary_content(**_kwargs)
 
             filename = os.path.join(path, filename_map.get(name, name) + suffix)
             if os.path.isfile(filename):

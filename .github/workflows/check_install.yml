@@ -1,0 +1,40 @@
+name: Install and Import
+
+on:
+  push:
+    branches:
+    - main
+    - v0.*.x
+    tags:
+    - v*
+  pull_request:
+  workflow_dispatch:
+
+permissions: {}  # disables all GitHub permissions for the workflow
+
+jobs:
+  pip-install-and-import:
+    name: Installation with pip & import (py-${{ matrix.python }})
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.8', '3.10', '3.11', '3.12', '3.13']
+        os: [ubuntu-latest]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 1
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python }}
+        cache: pip
+    - name: Install plasmapy_sphinx with pip
+      run: pip install .
+    - name: Import plasmapy_sphinx
+      run: python -c "import plasmapy_sphinx"

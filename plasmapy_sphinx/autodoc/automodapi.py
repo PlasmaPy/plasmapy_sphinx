@@ -303,12 +303,13 @@ __all__ = ["AutomodapiOptions", "ModAPIDocumenter", "setup"]
 
 import inspect
 import re
-import sys
 import warnings
 
 from collections import OrderedDict
 from docutils.parsers.rst import directives
 from docutils.statemachine import StringList
+from packaging.version import Version
+from sphinx import __version__ as sphinx_version
 from sphinx.application import Sphinx
 
 try:
@@ -349,6 +350,8 @@ _option_spec = {
     "inheritance-diagram": bool_option,
     "no-inheritance-diagram": bool_option,
 }  # type: Dict[str, Callable]
+if "no-index" not in _option_spec:
+    _option_spec["no-index"] = bool_option
 for option_name in list(_option_spec):
     if "member" in option_name:
         del _option_spec[option_name]
@@ -503,6 +506,15 @@ class ModAPIDocumenter(ModuleDocumenter):
             ],
         ),
     }
+
+    def __init__(self, *args: Any) -> None:
+        super().__init__(*args)
+
+        if Version(sphinx_version) < Version("7.2") and "no-index" in self.options:
+            # sphinx started using :no-index: instead of the original :noindex:
+            # in version 7.2
+            opt_value = self.options.pop("no-index")
+            self.options["noindex"] = opt_value
 
     @property
     def grouping_info(self) -> Dict[str, Dict[str, Union[str, None]]]:
