@@ -3,6 +3,6 @@
 #
 # ought to mirror [build-system.requires] under in pyproject.toml
 #
-setuptools >= 41.2
+setuptools >= 61
 setuptools_scm
 wheel >= 0.29.0

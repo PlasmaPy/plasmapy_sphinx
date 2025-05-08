@@ -208,6 +208,8 @@ __all__ = [
 import os
 
 from importlib import import_module
+from packaging.version import Version
+from sphinx import __version__ as sphinx_version
 from sphinx.ext.autosummary import Autosummary
 from sphinx.util import logging
 from typing import Any, Callable, Dict, List, Tuple, Union
@@ -664,7 +666,16 @@ class Automodsumm(Autosummary):
         self, name: str, prefixes: List[str]
     ) -> Tuple[str, Any, Any, str]:
         """See :func:`sphinx.ext.autosummary.import_by_name`"""
-        return super(Automodsumm, self).import_by_name(name, prefixes)
+
+        for prefix in prefixes:
+            if prefix is None:
+                continue
+
+            if name.startswith(f"{prefix}."):
+                name = name[len(prefix)+1:]
+                break
+
+        return super().import_by_name(name, prefixes)
 
 
 def setup(app: "Sphinx"):
