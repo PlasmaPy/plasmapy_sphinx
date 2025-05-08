@@ -121,10 +121,9 @@ The ``-e`` flag makes the installation editable.
    |Github repository|. It would really help!
 
 .. _clone a repository using SSH: https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-ssh-urls
-.. _create an issue: https://github.com/PlasmaPy/plasmapy_sphinx/issues/new/choose
+.. _create an issue: https://github.com/PlasmaPy/plasmapy_sphinx/issues/new
 .. _download Python: https://www.python.org/downloads
 .. _from PyPI: https://pypi.org/project/plasmapy_sphinx
-.. _from Zenodo: https://doi.org/10.5281/zenodo.6774349
 .. _installing packages: https://packaging.python.org/en/latest/tutorials/installing-packages/#installing-from-vcs
 .. _releases: https://github.com/PlasmaPy/plasmapy_sphinx/releases
 .. _virtual environment: https://realpython.com/python-virtual-environments-a-primer
