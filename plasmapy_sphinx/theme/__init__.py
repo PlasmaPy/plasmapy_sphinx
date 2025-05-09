@@ -1,5 +1,20 @@
 # Sphinx Guide to Theme Development
 # https://www.sphinx-doc.org/en/master/development/theming.html
+"""
+The PlasmaPy theme is a `Sphinx theme
+<https://www.sphinx-doc.org/en/master/usage/theming.html>`_ that
+inherits from the `sphinx_rtd_theme`.  As such, it shares all the same
+`configuration values supported by sphinx_rtd_theme
+<https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html#theme-options>`_\ .
+
+To use the PlasmaPy theme one needs to the :file:`conf.py`:
+
+.. code-block:: python
+
+    extensions = ["plasmapy_sphinx.theme"]
+    html_theme = "plasmapy_theme"
+
+"""
 __all__ = ["setup"]
 from sphinx.application import Sphinx
 

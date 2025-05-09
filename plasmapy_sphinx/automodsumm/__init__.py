@@ -1,10 +1,10 @@
 """
-This sub-package contains functionality that defines the :rst:dir:`automodsumm`
-directive and the
+`plasmapy_sphinx.automodsumm` contains functionality that defines the
+:rst:dir:`automodsumm` directive, and the associated automatic
 `stub file generation
 <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html
 #sphinx-autogen-generate-autodoc-stub-pages>`_
-for items listed in :rst:dir:`automodsumm` tables.
+for the documented items in the generated :rst:dir:`automodsumm` tables.
 
 *This functionality was highly influenced by and adapted from*
 `sphinx.ext.autosummary` *and* `sphinx_automodapi.automodsumm`.

@@ -1,3 +1,12 @@
+"""
+This module is a `Sphinx extension
+<https://www.sphinx-doc.org/en/master/usage/extensions/index.html>`_
+that adds the PlasmaPy CSS style sheet to the `sphinx` build
+environment.  The :file:`plasmapy.css` is loaded into the build system
+using `~sphinx.application.Sphinx.add_css_file` with a priority of
+``501``.
+"""
+
 from sphinx.application import Sphinx
 
 from plasmapy_sphinx.utils import static_dir, css_dir
