@@ -1,6 +1,6 @@
 # Sphinx Guide to Theme Development
 # https://www.sphinx-doc.org/en/master/development/theming.html
-"""
+r"""
 The PlasmaPy theme is a `Sphinx theme
 <https://www.sphinx-doc.org/en/master/usage/theming.html>`_ that
 inherits from the `sphinx_rtd_theme`.  As such, it shares all the same
