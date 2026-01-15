@@ -5,7 +5,7 @@ ci:
 repos:
 
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v5.0.0
+  rev: v6.0.0
   hooks:
   - id: check-ast
     name: validate Python code
@@ -24,7 +24,7 @@ repos:
   - id: check-yaml
 
 - repo: https://github.com/python-jsonschema/check-jsonschema
-  rev: 0.33.2
+  rev: 0.36.0
   hooks:
   - id: check-github-workflows
 
@@ -37,7 +37,7 @@ repos:
   - id: forbid-bidi-controls
 
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
-  rev: v2.15.0
+  rev: v2.16.0
   hooks:
   - id: pretty-format-ini
     args: [--autofix]
@@ -67,14 +67,14 @@ repos:
     - tomli
 
 - repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: v0.12.7
+  rev: v0.14.13
   hooks:
   - id: ruff
     name: ruff (see https://docs.astral.sh/ruff/rules)
     args: [--fix]
 
 - repo: https://github.com/asottile/blacken-docs
-  rev: 1.19.1
+  rev: 1.20.0
   hooks:
   - id: blacken-docs
     name: autoformat code blocks in docs
@@ -84,6 +84,6 @@ repos:
     - black==24.3.0
 
 - repo: https://github.com/sphinx-contrib/sphinx-lint
-  rev: v1.0.0
+  rev: v1.0.2
   hooks:
   - id: sphinx-lint
