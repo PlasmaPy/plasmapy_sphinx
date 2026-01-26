@@ -321,10 +321,13 @@ class GenDocsFromAutomodsumm:
             }
             if Version(sphinx_version) < Version("8.2"):
                 _kwargs["app"] = app
-            else:
+            elif Version(sphinx_version) < Version("9.0"):
                 _kwargs["config"] = app.config
                 _kwargs["events"] = app.events
                 _kwargs["registry"] = app.registry
+            else:
+                _kwargs["config"] = app.config
+                _kwargs["events"] = app.events
 
             content = generate_autosummary_content(**_kwargs)
 
