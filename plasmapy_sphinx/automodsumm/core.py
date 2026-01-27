@@ -623,7 +623,11 @@ class Automodsumm(Autosummary):
         return processor
 
     def get_items(self, names):
-        self.bridge.genopt["imported-members"] = True
+        if Version(sphinx_version) < Version("9.0"):
+            self.bridge.genopt["imported-members"] = True
+        else:
+            # sphinx dropped the use of DocumenterBridge in v9.0
+            self.options["imported-members"] = True
         return Autosummary.get_items(self, names)
 
     @property
