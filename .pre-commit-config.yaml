@@ -24,7 +24,7 @@ repos:
   - id: check-yaml
 
 - repo: https://github.com/python-jsonschema/check-jsonschema
-  rev: 0.37.2
+  rev: 0.37.4
   hooks:
   - id: check-github-workflows
 
@@ -67,7 +67,7 @@ repos:
     - tomli
 
 - repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: v0.15.15
+  rev: v0.15.20
   hooks:
   - id: ruff
     name: ruff (see https://docs.astral.sh/ruff/rules)
