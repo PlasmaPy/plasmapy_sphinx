@@ -18,8 +18,8 @@
 
 import os
 import sys
-
 from datetime import datetime
+
 from packaging.version import Version
 
 sys.path.insert(0, os.path.abspath(".."))

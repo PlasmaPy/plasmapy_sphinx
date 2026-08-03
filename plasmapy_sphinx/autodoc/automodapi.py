@@ -304,8 +304,8 @@ __all__ = ["AutomodapiOptions", "ModAPIDocumenter", "setup"]
 import inspect
 import re
 import warnings
-
 from collections import OrderedDict
+
 from docutils.parsers.rst import directives
 from docutils.statemachine import StringList
 from packaging.version import Version
@@ -320,10 +320,11 @@ except ImportError:
         pass
 
 
-from sphinx.ext.autodoc import bool_option, ModuleDocumenter
+from typing import Any, Callable, Dict, List, Optional, Union
+
+from sphinx.ext.autodoc import ModuleDocumenter, bool_option
 from sphinx.locale import __
 from sphinx.util import logging
-from typing import Any, Callable, Dict, List, Optional, Union
 
 from plasmapy_sphinx.automodsumm.core import AutomodsummOptions, option_str_list
 from plasmapy_sphinx.utils import default_grouping_info
@@ -380,7 +381,7 @@ class AutomodapiOptions(AutomodsummOptions):
         :rst:dir:`automodapi:toctree` and :rst:dir:`automodapi:no-toctree`
         for additional details.)
         """
-        if "no-toctree" in self.options and self.options["no-toctree"]:
+        if self.options.get("no-toctree"):
             if "toctree" in self.options:
                 del self.options["toctree"]
         elif "toctree" not in self.options:
@@ -433,7 +434,7 @@ class AutomodapiOptions(AutomodsummOptions):
         :rst:dir:`automodapi:groups`, :rst:dir:`automodapi:exclude-groups`, and
         :rst:dir:`automodapi:no-groups` for additional details.)
         """
-        if "no-groups" in self.options and self.options["no-groups"]:
+        if self.options.get("no-groups"):
             self.options["groups"] = []
             if "exclude-groups" in self.options:
                 del self.options["exclude-groups"]

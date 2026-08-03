@@ -3,23 +3,23 @@ A utility package containing functions and variables to support development of
 the core functionality in `plasmapy_sphinx`.
 """
 __all__ = [
+    "css_dir",
     "default_grouping_info",
     "find_mod_objs",
     "get_custom_grouping_info",
     "package_dir",
+    "static_dir",
     "templates_dir",
     "theme_dir",
-    "css_dir",
-    "static_dir",
 ]
 
 import inspect
-
 from collections import OrderedDict
 from importlib import import_module
-from sphinx.application import Sphinx
 from pathlib import Path
 from typing import Any, Dict
+
+from sphinx.application import Sphinx
 
 package_dir = Path(__file__).parent.absolute()
 """Absolute path to the `plasmapy_sphinx` package directory."""

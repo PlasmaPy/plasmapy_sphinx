@@ -9,7 +9,7 @@ using `~sphinx.application.Sphinx.add_css_file` with a priority of
 
 from sphinx.application import Sphinx
 
-from plasmapy_sphinx.utils import static_dir, css_dir
+from plasmapy_sphinx.utils import css_dir, static_dir
 
 
 def add_plasmapy_css(app, config):

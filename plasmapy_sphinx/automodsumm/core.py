@@ -206,13 +206,13 @@ __all__ = [
 ]
 
 import os
-
 from importlib import import_module
+from typing import Any, Callable, Dict, List, Tuple, Union
+
 from packaging.version import Version
 from sphinx import __version__ as sphinx_version
 from sphinx.ext.autosummary import Autosummary
 from sphinx.util import logging
-from typing import Any, Callable, Dict, List, Tuple, Union
 
 from plasmapy_sphinx.automodsumm.generate import GenDocsFromAutomodsumm
 from plasmapy_sphinx.utils import (
