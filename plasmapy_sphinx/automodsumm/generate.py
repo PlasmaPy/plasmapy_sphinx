@@ -6,6 +6,7 @@ __all__ = ["AutomodsummEntry", "AutomodsummRenderer", "GenDocsFromAutomodsumm"]
 
 import os
 import re
+from typing import Any, Dict, List
 
 from jinja2 import TemplateNotFound
 from packaging.version import Version
@@ -20,7 +21,6 @@ from sphinx.ext.autosummary.generate import (
 from sphinx.locale import __
 from sphinx.util import logging
 from sphinx.util.osutil import ensuredir
-from typing import Any, Dict, List
 
 from plasmapy_sphinx.utils import templates_dir
 
@@ -255,7 +255,7 @@ class GenDocsFromAutomodsumm:
         _info = self.logger.info
         _warn = self.logger.warning
 
-        showed_sources = list(sorted(source_filenames))
+        showed_sources = sorted(source_filenames)
         _info(
             __(f"[automodsumm] generating stub files for {len(showed_sources)} sources")
         )
